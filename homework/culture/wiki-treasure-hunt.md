@@ -77,7 +77,7 @@ to answer these questions.
 10. What two holidays will we have during this course (not counting the long
     winter break)?
 
-    Answer:
+    Answer: From the student handbook - January 16, 2017 and February 20, 2017
 
 ## Submitting Your Work
 
