@@ -79,8 +79,11 @@ to answer these questions.
 
     Answer: From the student handbook - January 16, 2017 and February 20, 2017
 
+<<<<<<< HEAD
 ## Submitting Your Work
 
+=======
+>>>>>>> 8e7ce9faf39071676c55a8938b9c224fd8321aef
 When you're ready, post your Github link for this assignment to Schoology with:
 
 - A link to the file containing your homework answers
