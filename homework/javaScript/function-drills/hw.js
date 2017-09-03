@@ -10,16 +10,28 @@
 // Input: an array of numbers
 // Output: the sum of the numbers that were passed in
 // Edge Case: If the array is empty, return 0
-var sumOfNums = function(numsArray){
-  // Your Code Here
+var sumOfNums = function(numsArray) {
+    // Your Code Here
+    var total = 0;
+    for (var i = 0; i < numsArray.length; i++) {
+        total += numsArray[i];
+    }
+    return total;
 };
 
 // #2
 // Input: an array of numbers
 // Output: an array of the numbers from the first array that are strictly
 //         greater (i.e. greater than but not equal to) than 10
-var numsGreaterThanTen = function(numsArray){
-  // Your Code Here
+var numsGreaterThanTen = function(numsArray) {
+    // Your Code Here
+    var newNumArray = [];
+    for (var i = 0; i < numsArray.length; i++) {
+        if (numsArray[i] > 10) {
+            newNumArray.push(numsArray[i]);
+        }
+    }
+    return newNumArray;
 };
 
 // #3
@@ -27,15 +39,29 @@ var numsGreaterThanTen = function(numsArray){
 // Output: `true` if ALL numbers passed in are strictly greater than 10;
 //         `false` otherwise
 // Edge Case: If the input array is empty, the function should return `true`.
-var allGreaterThanTen = function(numsArray){
-  // Your Code Here
+var allGreaterThanTen = function(numsArray) {
+    // Your Code Here
+    var result;
+    for (var i = 0; i < numsArray.length; i++) {
+        if (!(numsArray[i] > 10)) {
+            result = false;
+        }
+    }
+    result = true;
 };
 
 // #4
 // Input: an array of words
 // Output: an array of all words from the first array with five or more letters
-var wordsWithAtLeastFiveLetters = function(words){
-  // Your Code Here
+var wordsWithAtLeastFiveLetters = function(words) {
+    // Your Code Here
+    var bigWords = [];
+    for (var i = 0; i < words; i++) {
+        if (words[i].length >= 5) {
+            bigWords.push(words[i]);
+        }
+    }
+    return bigWords;
 };
 
 // #5
@@ -43,16 +69,28 @@ var wordsWithAtLeastFiveLetters = function(words){
 // Output: `true` if ALL words start with the letter 'a' (case-insensitive),
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
-var allStartingWithA = function(words){
-  // Your Code Here
+var allStartingWithA = function(words) {
+    // Your Code Here
+    for (var i = 0; i < words.length; i++) {
+        if (words[i].charAt(0).toLowerCase() !== "a") {
+            return false;
+        }
+    }
+    return true;
 };
 
 // #6
 // Input: an array of words
 // Output: `true` if there are ANY words that start with the letter 'b'
 //          (case-insensitive), `false` otherwise
-var anyStartingWithB = function(words){
-  // Your Code Here
+var anyStartingWithB = function(words) {
+    // Your Code Here
+    for (var i = 0; i < words.length; i++) {
+        if (words[i].charAt(0).toLowerCase() === "b") {
+            return true;
+        }
+    }
+    return false;
 };
 
 // #7
@@ -61,32 +99,61 @@ var anyStartingWithB = function(words){
 //          `false` otherwise
 //    Assume that vowels are 'a', 'e', 'i', 'o', and 'u' (NOT 'y')
 // Edge Case: If `n` is less than zero, return `null`.
-var hasAtLeastNVowels = function(word, n){
-  // Your Code Here
+var hasAtLeastNVowels = function(word, n) {
+    // Your Code Here
+    if (n < 0) {
+        return null;
+    }
+    var vowels = 0;
+    for (var i = 0; i < word.length; i++) {
+        if (word.charAt(i).toLowerCase() === "a" || word.charAt(i).toLowerCase() === "e" || word.charAt(i).toLowerCase() === "i" || word.charAt(i).toLowerCase() === "o" || word.charAt(i).toLowerCase() === "u") {
+            vowels++;
+        }
+    }
+    return vowels >= n;
 };
 
 // #8
 // Input: an array of words
 // Output: an array of words from the original array that have at least two
 //          vowels
-var wordsWithAtLeastTwoVowels = function(words){
-  // Your Code Here
+var wordsWithAtLeastTwoVowels = function(words) {
+    // Your Code Here
+    var vowelWords = [];
+    for (var i = 0; i < words.length; i++) {
+        if (hasAtLeastNVowels(words[i], 2)) {
+            vowelWords.push(words[i]);
+        }
+    }
+    return vowelWords;
 };
 
 // #9
 // Input: an array of words
 // Output: `true` if ALL words have two or more vowels, `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
-var allHaveAtLeastTwoVowels = function(words){
-  // Your Code Here
+var allHaveAtLeastTwoVowels = function(words) {
+    // Your Code Here
+    for (var i = 0; i < words.length; i++) {
+        if (!hasAtLeastNVowels(words[i], 2)) {
+            return false;
+        }
+    }
+    return true;
 };
 
 // #10
 // Input: an array of words
 // Output: `true` if there are ANY words have two or more vowels,
 //          `false` otherwise.
-var anyHaveAtLeastTwoVowels = function(words){
-  // Your Code Here
+var anyHaveAtLeastTwoVowels = function(words) {
+    // Your Code Here
+    for (var i = 0; i < words.length; i++) {
+        if (hasAtLeastNVowels(words[i], 2)) {
+            return true;
+        }
+    }
+    return false;
 };
 
 // #11
@@ -94,8 +161,14 @@ var anyHaveAtLeastTwoVowels = function(words){
 // Output: `true` if NONE of the words have two or more vowels,
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
-var noneHaveTwoOrMoreVowels = function(words){
-  // Your Code Here
+var noneHaveTwoOrMoreVowels = function(words) {
+    // Your Code Here
+    for (var i = 0; i < words.length; i++) {
+        if (hasAtLeastNVowels(words[i], 2)) {
+            return false;
+        }
+    }
+    return true;
 };
 
 // #12
@@ -104,23 +177,28 @@ var noneHaveTwoOrMoreVowels = function(words){
 //          tied to that key is the length of the word.
 // e.g. given ['cat', 'horse', 'elephant'],
 //      return { cat: 3, horse: 5, elephant: 8}
-var buildObjectFromWords = function(words){
-  // Your Code Here
+var buildObjectFromWords = function(words) {
+    // Your Code Here
+    var wordsObject = {};
+    for (var i = 0; i < words.length; i++) {
+        wordsObject[words[i]] = words[i].length;
+    }
+    return wordsObject;
 };
 
 
 /// DO NOT EDIT BELOW THIS LINE ///
 module.exports = {
-  sumOfNums: sumOfNums,
-  numsGreaterThanTen: numsGreaterThanTen,
-  allGreaterThanTen: allGreaterThanTen,
-  wordsWithAtLeastFiveLetters: wordsWithAtLeastFiveLetters,
-  allStartingWithA: allStartingWithA,
-  anyStartingWithB: anyStartingWithB,
-  hasAtLeastNVowels: hasAtLeastNVowels,
-  wordsWithAtLeastTwoVowels: wordsWithAtLeastTwoVowels,
-  allHaveAtLeastTwoVowels: allHaveAtLeastTwoVowels,
-  anyHaveAtLeastTwoVowels: anyHaveAtLeastTwoVowels,
-  noneHaveTwoOrMoreVowels: noneHaveTwoOrMoreVowels,
-  buildObjectFromWords: buildObjectFromWords
+    sumOfNums: sumOfNums,
+    numsGreaterThanTen: numsGreaterThanTen,
+    allGreaterThanTen: allGreaterThanTen,
+    wordsWithAtLeastFiveLetters: wordsWithAtLeastFiveLetters,
+    allStartingWithA: allStartingWithA,
+    anyStartingWithB: anyStartingWithB,
+    hasAtLeastNVowels: hasAtLeastNVowels,
+    wordsWithAtLeastTwoVowels: wordsWithAtLeastTwoVowels,
+    allHaveAtLeastTwoVowels: allHaveAtLeastTwoVowels,
+    anyHaveAtLeastTwoVowels: anyHaveAtLeastTwoVowels,
+    noneHaveTwoOrMoreVowels: noneHaveTwoOrMoreVowels,
+    buildObjectFromWords: buildObjectFromWords
 }
