@@ -41,13 +41,12 @@ var numsGreaterThanTen = function(numsArray) {
 // Edge Case: If the input array is empty, the function should return `true`.
 var allGreaterThanTen = function(numsArray) {
     // Your Code Here
-    var result;
     for (var i = 0; i < numsArray.length; i++) {
         if (!(numsArray[i] > 10)) {
-            result = false;
+            return false;
         }
     }
-    result = true;
+    return true;
 };
 
 // #4
@@ -56,7 +55,7 @@ var allGreaterThanTen = function(numsArray) {
 var wordsWithAtLeastFiveLetters = function(words) {
     // Your Code Here
     var bigWords = [];
-    for (var i = 0; i < words; i++) {
+    for (var i = 0; i < words.length; i++) {
         if (words[i].length >= 5) {
             bigWords.push(words[i]);
         }
