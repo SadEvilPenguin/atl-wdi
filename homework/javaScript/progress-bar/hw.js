@@ -15,29 +15,32 @@ var timerUI = {
     },
     drawProgressBars: function(timerValue) {
         // Your Code Here
-        const bar = document.getElementsByClassName("progress-bar")[0];
-        bar.style.width = (100 - timerValue) + "%";
-
+        const bar = document.getElementsByClassName("progress-bar");
+        for (var i = 0; i < bar.length; i++) {
+            bar[i].style.width = (100 - timerValue) + "%";
+        }
     },
     drawLitFuses: function(timerValue) {
         // Your Code Here
         let precent = timerValue / 100;
-        const burnt = document.getElementsByClassName("burnt")[0];
-        const unburnt = document.getElementsByClassName("unburnt")[0];
-        unburnt.style.width = (precent * 98) + "%";
-        burnt.style.width = ((1 - precent) * 98) + "%";
-
+        const burnt = document.getElementsByClassName("burnt");
+        const unburnt = document.getElementsByClassName("unburnt");
+        for (var i = 0; i < burnt.length; i++) {
+            unburnt[i].style.width = (precent * 98) + "%";
+            burnt[i].style.width = ((1 - precent) * 98) + "%";
+        }
     },
     drawCrawlers: function(timerValue) {
         // Your Code Here
         const time = 100 - timerValue;
-        const bug = document.getElementsByClassName("crawler")[0];
-        bug.style.marginLeft = (time * 10) + "px";
-        if (timerValue % 2 === 0) {
-            bug.style.marginTop = "0px";
-        } else {
-            bug.style.marginTop = "10px";
+        const bug = document.getElementsByClassName("crawler");
+        for (var i = 0; i < bug.length; i++) {
+            bug[i].style.marginLeft = (time * 10) + "px";
+            if (timerValue % 2 === 0) {
+                bug[i].style.marginTop = "0px";
+            } else {
+                bug[i].style.marginTop = "10px";
+            }
         }
-
     }
 };
