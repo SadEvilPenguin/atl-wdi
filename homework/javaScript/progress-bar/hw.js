@@ -3,16 +3,18 @@
 // See LICENSE for details.
 
 var timerUI = {
-  drawNumericDisplay: function(timerValue){
-    // Your Code Here
-  },
-  drawProgressBars: function(timerValue){
-    // Your Code Here
-  },
-  drawLitFuses: function(timerValue){
-    // Your Code Here
-  },
-  drawCrawlers: function(timerValue){
-    // Your Code Here
-  }
+    drawNumericDisplay: function(timerValue) {
+        // Your Code Here
+        const time = document.getElementById("numeric-display").innerHTML;
+
+    },
+    drawProgressBars: function(timerValue) {
+        // Your Code Here
+    },
+    drawLitFuses: function(timerValue) {
+        // Your Code Here
+    },
+    drawCrawlers: function(timerValue) {
+        // Your Code Here
+    }
 };
