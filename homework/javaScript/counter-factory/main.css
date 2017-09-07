@@ -5,25 +5,29 @@ See LICENSE for details.
 */
 
 body {
-  padding: 20px;
+    padding: 20px;
 }
 
 .component {
-  padding: 30px;
-  background-color: pink;
-  margin: 10px;
+    padding: 30px;
+    background-color: pink;
+    margin: 10px;
 }
 
 main {
-  width: auto;
-  float: left;
+    width: auto;
+    float: left;
 }
 
 .counter {
-  border: black solid 1px;
-  margin: 1px;
-  text-align: center;
-  background-color: violet;
-  width: 150px;
-  float: left;
+    border: black solid 1px;
+    margin: 1px;
+    text-align: center;
+    background-color: violet;
+    width: 150px;
+    float: left;
+}
+
+[data-count-id="0"] span {
+    background-color: #EAEE82;
 }
