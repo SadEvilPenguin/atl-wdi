@@ -4,7 +4,7 @@
 
 var barrels = function(small, large, total) {
     let smallPrice = 60;
-    total = total - (60 * small);
+    total = total - (smallPrice * small);
     return total / large;
 };
 
