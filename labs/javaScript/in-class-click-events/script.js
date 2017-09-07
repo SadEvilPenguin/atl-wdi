@@ -2,6 +2,9 @@ window.onload = function() {
     const button = document.querySelectorAll("button");
     const text = "A click event is essentially tying a function (as a callback) to an element and specifying what action needs to happen to trigger or call/invoke that function (callback).";
     const p = document.createElement("p");
+    const info = document.createElement("div");
+    info.id = "information";
+    document.body.appendChild(info);
 
 
     function createAlert() {
@@ -10,12 +13,12 @@ window.onload = function() {
 
     function addText() {
         p.innerText = text;
-        document.body.appendChild(p);
+        document.getElementById("information").appendChild(p);
     }
 
     function removeText() {
         const removeP = document.querySelector("p");
-        document.body.removeChild(removeP);
+        document.getElementById("information").removeChild(removeP);
     }
 
     //button[0].addEventListener("click", createAlert);

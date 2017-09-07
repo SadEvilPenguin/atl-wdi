@@ -16,36 +16,67 @@
 
 
 window.onload = function() {
-  var body = document.body;
-  var ring1 = document.querySelector('.ring-1');
-  var ring2 = document.querySelector('.ring-2');
-  var ring3 = document.querySelector('.ring-3');
+    const body = document.body;
+    const ring1 = document.querySelector('.ring-1');
+    const ring2 = document.querySelector('.ring-2');
+    const ring3 = document.querySelector('.ring-3');
 
-  body.addEventListener('click', bullseyeGame.miss);
-  ring1.addEventListener('click', bullseyeGame.outerRing)
+    body.addEventListener('click', bullseyeGame.miss);
+    ring1.addEventListener('click', bullseyeGame.outerRing);
+    ring2.addEventListener('click', bullseyeGame.middleRing)
+    ring3.addEventListener('click', bullseyeGame.innerRing)
 }
 
 
-var bullseyeGame = {
-  score: 0,
+const bullseyeGame = {
+    score: 0,
+    //selects element holding the score has a paramenter of points so when the function is called later by the event it will pass a # of points as the argument and add to total of points
+    updateScore: function(points) {
+        var scoreElement = document.querySelector('.score');
+        this.score += points
 
-  updateScore: function(points) {
-    var scoreElement = document.querySelector('.score');
-    this.score += points
+        scoreElement.innerHTML = `${this.score} points`
+    },
 
-    scoreElement.innerHTML = `${this.score} points`
-  },
-
-  miss: function(event) {
-    event.stopPropagation();
-    alert('YOU MISSED');
-
-    bullseyeGame.updateScore(0);
-    // [ALERT:] needs to be bullseyeGame because this in clickEvents refers to the html element that was clicked
-  },
-
-  outerRing: function(event) {
-    event.stopPropagation();
-    alert('outerRing was clicked')
-  }
+    miss: function(event) {
+        let self = this;
+        event.stopPropagation();
+        //alert('YOU MISSED');
+        bullseyeGame.updateScore(0);
+        // [ALERT:] needs to be bullseyeGame because this in clickEvents refers to the html element that was clicked
+        self.style.backgroundColor = "yellow";
+        setTimeout(function() {
+            self.style.backgroundColor = "white";
+        }, 2000);
+    },
+    outerRing: function(event) {
+        let self = this;
+        event.stopPropagation();
+        //alert('outerRing was clicked');
+        bullseyeGame.updateScore(10);
+        self.style.backgroundColor = "yellow";
+        setTimeout(function() {
+            self.style.backgroundColor = "red";
+        }, 2000);
+    },
+    middleRing: function(event) {
+        let self = this;
+        event.stopPropagation();
+        //alert('middleRing was clicked');
+        bullseyeGame.updateScore(50);
+        self.style.backgroundColor = "yellow";
+        setTimeout(function() {
+            self.style.backgroundColor = "white";
+        }, 2000);
+    },
+    innerRing: function(event) {
+        let self = this;
+        event.stopPropagation();
+        //alert('innerRing was clicked');
+        bullseyeGame.updateScore(100);
+        self.style.backgroundColor = "yellow";
+        setTimeout(function() {
+            self.style.backgroundColor = "red"
+        }, 2000);
+    },
 }
