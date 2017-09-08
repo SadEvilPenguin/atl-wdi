@@ -50,11 +50,12 @@ const Presenter = {
     insertCounterComponent: function(newCountId) {
         console.log(`insert counter component #${newCountId}`);
         let div = document.createElement("div");
-        div.innerHTML = "<h3>Count: <span>0</span></h3> <button class='increment'>+1</button> <button class='delete'> Delete </button>";
+        div.innerHTML = "<h3><span class='title'>Count</span>: <span>0</span></h3>  <input type='text' class='name'> <button class='increment'>+1</button> <button class='delete'> Delete </button>";
         div.className = "counter";
         div.dataset.index = newCountId;
         div.getElementsByClassName('increment')[0].onclick = AppController.onClickIncrement;
         div.getElementsByClassName('delete')[0].onclick = AppController.onClickDelete;
+        div.getElementsByClassName('name')[0].onkeypress = AppController.onEnterName;
         document.getElementById("counter-list").appendChild(div);
 
     },
@@ -63,6 +64,12 @@ const Presenter = {
         let value = CounterCollection.getCounterValue(countId);
         console.log(value);
         document.querySelector(`[data-index="${countId}"] span`).innerHTML = value;
+
+    },
+    nameCounterComponent: function(countId, name) {
+        console.log(`name counter component #${countId}`);
+        let value = name;
+        document.querySelector(`[data-index="${countId}"] .title`).innerHTML = value;
 
     },
     removeCounterComponent: function(countId) { // REACH
@@ -85,6 +92,15 @@ const AppController = {
         CounterCollection.incrementCounter(counterId);
         Presenter.refreshCounterComponent(counterId);
 
+
+    },
+    onEnterName: function(event) {
+        if (event.keyCode == 13) {
+            let name = event.target.value;
+            let counterId = Number(event.target.parentNode.dataset.index);
+            console.log(`Change Name #${counterId}`);
+            Presenter.nameCounterComponent(counterId, name);
+        };
 
     },
     onClickDelete: function(event) { // REACH

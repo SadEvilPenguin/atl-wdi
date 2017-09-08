@@ -12,6 +12,7 @@ body {
     padding: 30px;
     background-color: #4269BB;
     margin: 10px;
+    color: white;
 }
 
 main {
@@ -26,4 +27,8 @@ main {
     background-color: #4162F7;
     width: 150px;
     float: left;
+}
+
+li {
+    font-weight: bold;
 }
