@@ -51,8 +51,8 @@ const Presenter = {
         console.log(`insert counter component #${newCountId}`);
         let div = document.createElement("div");
         div.innerHTML = "<h3>Count: <span>0</span></h3> <button class='increment'>+1</button> <button class='delete'> Delete </button>";
-        div.className += " counter";
-        div.dataset.countId = newCountId;
+        div.className = "counter";
+        div.dataset.index = newCountId;
         div.getElementsByClassName('increment')[0].onclick = AppController.onClickIncrement;
         div.getElementsByClassName('delete')[0].onclick = AppController.onClickDelete;
         document.getElementById("counter-list").appendChild(div);
@@ -62,13 +62,13 @@ const Presenter = {
         console.log(`refresh counter component #${countId}`);
         let value = CounterCollection.getCounterValue(countId);
         console.log(value);
-        document.querySelector(`[data-count-id="${countId}"] span`).innerHTML = value;
+        document.querySelector(`[data-index="${countId}"] span`).innerHTML = value;
 
     },
     removeCounterComponent: function(countId) { // REACH
         console.log(`remove counter component #${countId}`);
         // Your Code Here
-        let div = document.querySelector(`[data-count-id="${countId}"]`);
+        let div = document.querySelector(`[data-index="${countId}"]`);
         document.getElementById("counter-list").removeChild(div);
     }
 };
@@ -80,7 +80,7 @@ const AppController = {
         Presenter.insertCounterComponent(CounterCollection.lastCountId);
     },
     onClickIncrement: function(event) {
-        let counterId = Number(event.target.parentNode.dataset.countId);
+        let counterId = Number(event.target.parentNode.dataset.index);
         console.log(`click incerement #${counterId}`);
         CounterCollection.incrementCounter(counterId);
         Presenter.refreshCounterComponent(counterId);
@@ -88,7 +88,7 @@ const AppController = {
 
     },
     onClickDelete: function(event) { // REACH
-        let counterId = Number(event.target.parentNode.dataset.countId);
+        let counterId = Number(event.target.parentNode.dataset.index);
         //CounterCollection.destroyCounter(counterId);
         Presenter.removeCounterComponent(counterId);
     }

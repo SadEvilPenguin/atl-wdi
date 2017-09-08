@@ -10,7 +10,7 @@ body {
 
 .component {
     padding: 30px;
-    background-color: pink;
+    background-color: #4269BB;
     margin: 10px;
 }
 
@@ -21,13 +21,9 @@ main {
 
 .counter {
     border: black solid 1px;
-    margin: 1px;
+    margin: 3px;
     text-align: center;
-    background-color: violet;
+    background-color: #4162F7;
     width: 150px;
     float: left;
-}
-
-[data-count-id="0"] span {
-    background-color: #EAEE82;
 }
