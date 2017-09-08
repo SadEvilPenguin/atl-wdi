@@ -11,12 +11,11 @@ function makeChange(price, payment, denominations) {
     let coinArray = [];
     let coin = 0;
     let remainder = 0;
-    if ()
-        denominations.forEach(function(element) {
-            coin = Math.trunc(change / element);
-            coinArray.push(coin);
-            change = change % element;
-        });
+    denominations.forEach(function(element) {
+        coin = Math.trunc(change / element);
+        coinArray.push(coin);
+        change = change % element;
+    });
 
     if (change !== 0) {
         console.log(`please make sure to add penny at end of coins array otherwise you will have ${change} remaining`)
