@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    background-image: url("https://i.pinimg.com/originals/36/10/06/3610062ed612bf558fc08ed252fe6241.jpg");
+    background-repeat: repeat;
+    background-size: 25%;
+    text-align: center;
+}
+
+main h1 {
+    background: white;
+}
+
+.nav-wrapper {
+    background: grey;
+}
+
+.page-footer {
+    background: grey;
+}
+
+.page-footer .footer-copyright {
+    background: #3F3F3F;
+}
