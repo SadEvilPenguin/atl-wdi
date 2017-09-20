@@ -1,0 +1,7 @@
+{{#if error}}
+<h1>{{error}}</h1>
+{{else}}
+<h1>{{todo.description}}</h1>
+<h3>Urgent: {{todo.urgent}}</h3>
+<a href="/todos">Return ToDos</a>
+{{/if}}

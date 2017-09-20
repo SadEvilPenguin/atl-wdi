@@ -1,7 +1,8 @@
-<h1> Todos </h1>
+<h1> You have {{total}} Todos! </h1>
+<h3><a href="/todos/new">Add a New Todo</a></h3>
 <ul>
   {{#each todos}}
-    <li>Description: {{description}}</li>
+    <li>Description: <a href="/todos/{{@index}}">{{description}}</a></li>
     <li>Urgent: {{urgent}}</li>
     <br>
   {{/each}}

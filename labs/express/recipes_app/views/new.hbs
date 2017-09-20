@@ -1,0 +1,19 @@
+<h1>Create a new Recipe</h1>
+<form method="POST" action="/recipes">
+    <div>
+    <label for="title">Title:</label>
+  <input name="title">
+    </div>
+    <div>   
+  <label for="veggie">Veggie: </label>
+  <span>yes</span><input type='radio' name='veggie' value="true" checked>
+  <span>no</span><input type='radio' name='veggie' value="false"/>
+  </div> 
+  <div>
+    <label for="imageUrl">Image Url:</label>
+  <input name="imageUrl">
+    </div>
+  <div>
+    <input type="submit" value="Add a New Recipe">
+  </div>
+</form>

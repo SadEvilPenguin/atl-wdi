@@ -1,0 +1,9 @@
+<h1> You have {{total}} Recipes! </h1>
+<h3><a href="/recipes/new">Add a New Recipe</a></h3>
+<ul>
+  {{#each recipes}}
+    <li>Title: <a href="/recipes/{{@index}}">{{title}}</a></li>
+    <li>Veggie: {{veggie}}</li>
+    <br>
+  {{/each}}
+</ul>
