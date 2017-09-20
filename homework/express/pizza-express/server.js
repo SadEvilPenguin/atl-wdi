@@ -16,7 +16,7 @@ const notFoundController = require('./controller/404.js');
 app.use('/', rootController);
 app.use('/topping', toppingController);
 app.use('/order', orderController);
-app.use('/:random', notFoundController);
+app.use('/', notFoundController);
 
 
 
