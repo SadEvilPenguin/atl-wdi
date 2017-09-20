@@ -7,13 +7,14 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(express.static(__dirname + '/public'));
 
 const pirateController = require('./controllers/pirates.js');
 
 
 app.use("/pirates", pirateController);
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 
 app.listen(port, function() {
