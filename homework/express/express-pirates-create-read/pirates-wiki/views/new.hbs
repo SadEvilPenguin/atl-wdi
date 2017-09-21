@@ -1,16 +1,28 @@
 <h1>Add another Pirate</h1>
 <form method="POST" action="/pirates">
+    <div class="input-field">
     <label for="name">name:</label>
     <input name="name">
+    </div>
+    <div class="input-field">
     <label for="birthplace">birthplace:</label>
     <input name="birthplace">
+    </div>
+    <div class="input-field">
     <label for="death_year">year of death:</label>
     <input name="death_year">
+    </div>
+    <div class="input-field">
     <label for="base">base:</label>
     <input name="base">
+    </div>
+    <div class="input-field">
     <label for="nickname">nickname:</label>
     <input name="nickname">
+    </div>
     <div>
-        <input type="submit" value="Add a New Pirate">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Add Pirate
+        <i class="material-icons right">send</i>
+  </button>
     </div>
 </form>

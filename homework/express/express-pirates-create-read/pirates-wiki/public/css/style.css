@@ -1,0 +1,31 @@
+body {
+    background: url("/images/map.jpg");
+}
+
+.pirates {
+    padding-left: 15px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.51);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.51);
+}
+
+nav {
+    background: #747373;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.51);
+    padding: 20px 0px 15px 15px;
+}
+
+.input-field label {
+    color: #525050;
+    font-size: 1.2rem;
+}
