@@ -6,14 +6,15 @@ body {
     padding-left: 15px;
     font-size: 1.2em;
     font-weight: bolder;
-    background: rgba(255, 255, 255, 0.51);
+    background: rgba(255, 255, 255, 0.65);
 }
 
 h1,
 h2,
 h3 {
     font-weight: bolder;
-    background: rgba(255, 255, 255, 0.51);
+    background: rgba(255, 255, 255, 0.65);
+    padding-left: 10px;
 }
 
 nav {
@@ -21,11 +22,33 @@ nav {
 }
 
 form {
-    background: rgba(255, 255, 255, 0.51);
+    background: rgba(255, 255, 255, 0.65);
     padding: 20px 0px 15px 15px;
 }
 
 .input-field label {
     color: #525050;
     font-size: 1.2rem;
+}
+
+.clear {
+    background: none;
+    padding: 0;
+}
+
+.btn-flat {
+    line-height: 21px;
+    height: 21px;
+    padding: 0;
+    color: #1B9CE2;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.waves-button-input {
+    padding: 0;
+}
+
+.pad {
+    padding-left: 10px;
 }

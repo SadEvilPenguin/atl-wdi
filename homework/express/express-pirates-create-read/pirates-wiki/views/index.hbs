@@ -1,10 +1,10 @@
 <h1>Total Pirates: {{pirate.length}}</h1>
 <ul class="pirates">
   {{#each pirate}}
-    <li>Pirate: <a href="/pirates/{{@index}}">{{name}}</a></li>
-    <div><a href="/pirates/{{@index}}/edit">Edit</a></div>
-    <form action="/pirates/{{@index}}?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE"/>
+    <li class="pad">Pirate: <a href="/pirates/{{@index}}">{{name}}</a></li>
+    <div class="pad"><a href="/pirates/{{@index}}/edit">Edit</a></div>
+    <form class="clear" action="/pirates/{{@index}}?_method=DELETE" method="POST">
+      <input class="waves-effect waves-teal btn-flat pad" type="submit" value="Delete"/>
     </form>
     <hr>
   {{/each}}
