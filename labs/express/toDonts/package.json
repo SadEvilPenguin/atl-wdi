@@ -1,0 +1,17 @@
+{
+  "name": "todonts",
+  "version": "1.0.0",
+  "description": "To Don'ts list creation lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Mears",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "hbs": "^4.0.1",
+    "method-override": "^2.3.9"
+  }
+}

@@ -1,0 +1,19 @@
+<h1>Add another Thing not to Do</h1>
+<form method="POST" action="/todonts">
+    <div class="input-field">
+        <label for="description">Description:</label>
+        <input name="description">
+    </div>
+    <div class="input-field">
+        <label for="location">Location:</label>
+        <input name="location">
+    </div>
+    <div class="input-field">
+        <label for="urgent">urgent:</label>
+        <span>yes</span><input type='radio' name='urgent' value="true" checked>
+        <span>no</span><input type='radio' name='urgent' value="false"/>
+    </div>
+    <div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Add a To Dont</button>
+    </div>
+</form>

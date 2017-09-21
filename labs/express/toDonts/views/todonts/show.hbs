@@ -1,0 +1,10 @@
+<h1>{{Dont.description}}</h1>
+<ul>
+    <li>Location: {{Dont.location}}</li>
+    <li>Urgent: {{Dont.urgent}}</li>
+</ul>
+<a href="/todonts/{{id}}/edit">Edit</a>
+<form action="/todonts/{{id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete"/>
+</form>
+<a href="/todonts">Return to List</a>
