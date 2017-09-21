@@ -66,6 +66,11 @@ router.delete('/:id', function(req, res) {
     res.redirect('/pirates'); // redirect back to the index route
 });
 
+router.delete('/:id/edit', function(req, res) {
+    pirates.splice(req.params.id, 1); // remove the item from the array
+    res.redirect('/pirates'); // redirect back to the index route
+});
+
 router.get('/', function(req, res) {
 
     res.render('index', {
