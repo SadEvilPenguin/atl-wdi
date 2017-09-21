@@ -2,17 +2,23 @@
 const path = require('path');
 const logger = require('morgan');
 const express = require('express');
+//handlebar
 const hbs = require('hbs');
+//for grabing from a form
 const bodyParser = require('body-parser');
+//for deleting
+const methodOverride = require('method-override');
+
 
 /* app settings*/
 const app = express();
 const port = process.env.PORT || 3000;
-/* set up the application params*/
 
+//method Overrride
+app.use(methodOverride('_method'));
 // log
 app.use(logger('dev'));
-
+//bodyParser
 app.use(bodyParser.urlencoded({
     extended: true
 }));
