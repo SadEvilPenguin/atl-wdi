@@ -1,9 +1,10 @@
 console.log('tamagotchi file is loaded');
 
+
 //your class declaration here
 class Tamagotchi {
     constructor(name, creature) {
-        this.propertyName = name;
+        this.name = name;
         this.creatureType = creature;
         this.foodInTummy = 10;
         this.restedness = 10;
@@ -11,7 +12,7 @@ class Tamagotchi {
     }
     cry() {
         this.foodInTummy--;
-        console.log(`${this.propertyName} says WAHH!!!`);
+        console.log(`${this.name} says WAHH!!!`);
     }
     puke() {
         this.foodInTummy--;
@@ -19,7 +20,7 @@ class Tamagotchi {
     }
     yawn() {
         this.restedness--;
-        console.log(`${this.propertyName} has current restedness of: ${this.restedness}`);
+        console.log(`${this.name} has current restedness of: ${this.restedness}`);
     }
 }
 
