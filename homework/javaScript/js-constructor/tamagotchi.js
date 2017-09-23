@@ -22,6 +22,18 @@ class Tamagotchi {
         this.restedness--;
         console.log(`${this.name} has current restedness of: ${this.restedness}`);
     }
+
+    start() {
+        let self = this;
+        this.hungerTimer = setInterval(() => { self.cry() }, 6000);
+        this.yawnTimer = setInterval(() => { self.yawn() }, 10000);
+        this.sickTimer = setInterval(() => { self.puke() }, 20000);
+    }
+    stop() {
+        clearInterval(this.hungerTimer);
+        clearInterval(this.yawnTimer);
+        clearInterval(this.sickTimer);
+    }
 }
 
 //create new Tamagotchis
@@ -30,9 +42,9 @@ const tommy = new Tamagotchi("tommy", "cat");
 
 //test out your Tamagotchies below via console.logs
 
-tammy.cry();
-tammy.puke();
-tammy.yawn();
-tommy.cry();
-tommy.puke();
-tommy.yawn();
+// tammy.cry();
+// tammy.puke();
+// tammy.yawn();
+// tommy.cry();
+// tommy.puke();
+// tommy.yawn();
