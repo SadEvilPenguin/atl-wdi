@@ -40,9 +40,9 @@ class Tamagotchi {
     stop() {
         this.check = setInterval(() => {
             if (this.foodInTummy === 0 || this.restedness === 0 || this.health === 0) {
-                clearInterval(this.hungerTimer);
-                clearInterval(this.yawnTimer);
-                clearInterval(this.sickTimer);
+                clearTimeout(this.hungerTimer);
+                clearTimeout(this.yawnTimer);
+                clearTimeout(this.sickTimer);
                 document.getElementById(this.name).innerHTML = `${this.name} has died!`;
                 document.getElementsByClassName(this.name)[0].childNodes[0].setAttribute("src", "./img/tama_dead.gif");
                 clearInterval(this.check);
