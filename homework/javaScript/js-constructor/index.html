@@ -4,11 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>tamagotchi OOP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <h4>Create Your Tamagotchi:</h4>
     <div id="create">
         <label>Name: </label>
         <input type="text" id="name"><br>
@@ -16,15 +18,14 @@
         <input type="text" id="creature"><br>
         <button type="button" onclick="create(document.getElementById('name').value, document.getElementById('creature').value)">Create Tamagotchi</button>
     </div>
-    <br>
     <hr>
+    <h4>Care for Your Tamagotchi</h4>
     <div id="help">
         <label>Tamagotchi Name:</label><input type="text" id="a">
         <button type="button" onclick="player.feedTamagotchi(eval(document.getElementById('a').value))">Feed Me!</button>
         <button type="button" onclick="player.medicateTamagotchi(eval(document.getElementById('a').value))">Medicate Me!</button>
         <button type="button" onclick="player.knockOutTamagotchi(eval(document.getElementById('a').value))">Knock Me Out!</button>
     </div>
-    <br>
     <hr>
     <div id="tama"></div>
     <div id='say'></div>

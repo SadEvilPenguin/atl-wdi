@@ -24,28 +24,20 @@ class Tamagotchi {
     }
     start() {
         let self = this;
-        this.hungerTimer = setTimeout(() => {
-            self.cry();
-            self.start()
-        }, getRandom(5000, 15000));
-        this.yawnTimer = setTimeout(() => {
-            self.yawn();
-            self.start()
-        }, getRandom(15000, 30000));
-        this.sickTimer = setTimeout(() => {
-            self.puke();
-            self.start()
-        }, getRandom(20000, 30000));
+        this.hungerTimer = setInterval(() => { self.cry() }, getRandom(5000, 10000));
+        this.yawnTimer = setInterval(() => { self.yawn() }, getRandom(5000, 15000));
+        this.sickTimer = setInterval(() => { self.puke() }, getRandom(15000, 25000));
     }
     stop() {
+        let self = this;
         this.check = setInterval(() => {
-            if (this.foodInTummy === 0 || this.restedness === 0 || this.health === 0) {
-                clearTimeout(this.hungerTimer);
-                clearTimeout(this.yawnTimer);
-                clearTimeout(this.sickTimer);
-                document.getElementById(this.name).innerHTML = `${this.name} has died!`;
-                document.getElementsByClassName(this.name)[0].childNodes[0].setAttribute("src", "./img/tama_dead.gif");
-                clearInterval(this.check);
+            if (self.foodInTummy <= 0 || self.restedness <= 0 || self.health <= 0) {
+                clearInterval(self.hungerTimer);
+                clearInterval(self.yawnTimer);
+                clearInterval(self.sickTimer);
+                document.getElementById(self.name).innerHTML = `${self.name} has died!`;
+                document.getElementsByClassName(self.name)[0].childNodes[0].setAttribute("src", "./img/tama_dead.gif");
+                clearInterval(self.check);
             }
         }, 1000);
     }
