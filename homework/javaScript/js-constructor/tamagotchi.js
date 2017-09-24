@@ -12,15 +12,15 @@ class Tamagotchi {
     }
     cry() {
         this.foodInTummy--;
-        console.log(`${this.name} says WAHH!!!`);
+        document.getElementById(this.name).innerHTML = `WAHH!!! Food Left: ${this.foodInTummy}`;
     }
     puke() {
-        this.foodInTummy--;
-        console.log(`Food left: ${this.foodInTummy}  WAHH!!!`);
+        this.health--;
+        document.getElementById(this.name).innerHTML = `BlAHH!!! Health left: ${this.health}`;
     }
     yawn() {
         this.restedness--;
-        console.log(`${this.name} has current restedness of: ${this.restedness}`);
+        document.getElementById(this.name).innerHTML = `has current restedness of: ${this.restedness}`;
     }
 
     start() {
@@ -34,17 +34,33 @@ class Tamagotchi {
         clearInterval(this.yawnTimer);
         clearInterval(this.sickTimer);
     }
-}
+};
+
+function createTama(id) {
+    let tama = document.createElement('div');
+    tama.setAttribute("class", id);
+    document.getElementById('tama').appendChild(tama);
+    let pic = document.createElement('img');
+    pic.setAttribute("src", "./img/tama.gif");
+    let name = document.createElement('p');
+    name.appendChild(document.createTextNode(id));
+    tama.appendChild(pic);
+    tama.appendChild(name);
+    let tamaSay = document.createElement('div');
+    tamaSay.setAttribute("class", id);
+    let say = document.createElement('span');
+    say.setAttribute("id", id);
+    tamaSay.appendChild(document.createTextNode(`${id} says: `));
+    tamaSay.appendChild(say);
+    document.getElementById('say').appendChild(tamaSay);
+
+};
 
 //create new Tamagotchis
-const tammy = new Tamagotchi("tammy", "Dragon");
-const tommy = new Tamagotchi("tommy", "cat");
+let create = (name, creature) => {
+    this[name] = new Tamagotchi(name, creature);
+    this[name].start();
+    createTama(name);
+}
 
 //test out your Tamagotchies below via console.logs
-
-// tammy.cry();
-// tammy.puke();
-// tammy.yawn();
-// tommy.cry();
-// tommy.puke();
-// tommy.yawn();

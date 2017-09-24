@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>tamagotchi OOP</title>
-    <!-- DECOUPLED JS FILES -->
-    <!-- tamagotchi is loaded first -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="create">
+        <label>Name: </label>
+        <input type="text" id="name"><br>
+        <label>Creature Type:</label>
+        <input type="text" id="creature"><br>
+        <button type="button" onclick="create(document.getElementById('name').value, document.getElementById('creature').value)">Create Tamagotchi</button>
+    </div>
+    <br>
+    <hr>
+    <div id="help">
+        <label>Tamagotchi Name:</label><input type="text" id="a">
+        <button type="button" onclick="player.feedTamagotchi(eval(document.getElementById('a').value))">Feed Me!</button>
+        <button type="button" onclick="player.medicateTamagotchi(eval(document.getElementById('a').value))">Medicate Me!</button>
+        <button type="button" onclick="player.knockOutTamagotchi(eval(document.getElementById('a').value))">Knock Me Out!</button>
+    </div>
+    <br>
+    <hr>
+    <div id="tama"></div>
+    <div id='say'></div>
+
+
     <script src="tamagotchi.js"></script>
     <!-- player is loaded afterwards so that it may refer to tamagotchi -->
     <script type="text/javascript" src="player.js"></script>
-  </head>
-  <body>
+</body>
 
-  </body>
 </html>
