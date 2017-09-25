@@ -1,0 +1,5 @@
+//When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
+
+//First thought was who the user was and how the models related to them for instance with the coffee app. It seemed like the user should be at the highest level as user is only interested in the coffeshop near them. From there I thought about the relationships between each model, for example a player is apart of a team. So it seemed to make sense to nest that object within the team schema.
+
+//One thing I struggled with was, that I was trying to relate all of these models to a noSQL db which some of these apps seem better suited for SQL dbs. For example the coffee app could of had seperate models that related to each other but is seams to me the best utilization of noSQL is a linear model relationship.
