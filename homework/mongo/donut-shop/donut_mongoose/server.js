@@ -10,6 +10,7 @@ const methodOverride = require("method-override");
 const hbs = require("hbs");
 const logger = require('morgan');
 
+mongoose.Promise = global.Promise;
 
 //======================
 // MIDDLEWARE
