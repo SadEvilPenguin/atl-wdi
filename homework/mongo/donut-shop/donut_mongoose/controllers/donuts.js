@@ -112,6 +112,22 @@ router.put('/:id', (req, res) => {
 })
 
 //======================
+//Buy route
+//======================
+router.get('/:id/buy', (req, res) => {
+    const donutId = req.params.id
+    DonutModel.findByIdAndUpdate(donutId, { $inc: { qty: (-1) } }, { new: true })
+        .then(() => {
+            res.redirect(`/${donutId}`)
+        })
+        .catch((err) => {
+            res.send(err);
+        })
+})
+
+
+
+//======================
 // DELETE
 //======================
 // Create a DELETE delete route "/:id" that deletes the donut and
