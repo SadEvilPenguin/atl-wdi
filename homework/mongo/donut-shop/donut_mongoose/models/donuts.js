@@ -27,9 +27,20 @@ const donutSchema = new Schema({
 
 });
 
+
+const userSchema = new Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    shopping_cart: Array
+})
+
 //export your donut with module.exports()
 const DonutModel = mongoose.model("Donut", donutSchema);
+const UserModel = mongoose.model("User", userSchema)
 
 module.exports = {
-    DonutModel: DonutModel
+    DonutModel: DonutModel,
+    UserModel: UserModel
 }
