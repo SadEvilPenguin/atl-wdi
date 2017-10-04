@@ -27,33 +27,33 @@
 
 5. Are all components classes? 
 
-    ..*No a component can be a function as well
-    ..*https://reactjs.org/docs/components-and-props.html
+    ⋅⋅*No a component can be a function as well
+    ⋅⋅*https://reactjs.org/docs/components-and-props.html
 
 6. List five "Synthetic Events" provided by React:
 
-    ..*onCopy, onCut, onPaste, onKeyDown, onKeyPress, onKeyUp
-    ..*https://reactjs.org/docs/events.html#clipboard-events
+    ⋅⋅*onCopy, onCut, onPaste, onKeyDown, onKeyPress, onKeyUp
+    ⋅⋅*https://reactjs.org/docs/events.html#clipboard-events
 
 7. Do we have to use ES6 syntax with React?
 
-    ..*No we do not need to use ES6. It is helpful because we can use classes with ES6
-    ..*https://reactjs.org/docs/react-without-es6.html 
+    ⋅⋅*No we do not need to use ES6. It is helpful because we can use classes with ES6
+    ⋅⋅*https://reactjs.org/docs/react-without-es6.html 
 
 8. Where can I go to check out React's built-in Accessibility features?
 
-    ..*You can check some accessibility feautres directly in our JSX code.
-    ..*https://reactjs.org/docs/accessibility.html#why-accessibility
+    ⋅⋅*You can check some accessibility feautres directly in our JSX code.
+    ⋅⋅*https://reactjs.org/docs/accessibility.html#why-accessibility
 
 9. List five React Component Lifecycle Methods:
 
-    ..*constructor(), render(), shoudComponentUpdate(), componentWillUnmount(), componentDidMount()
-    ..*https://reactjs.org/docs/react-component.html#the-component-lifecycle
+    ⋅⋅*constructor(), render(), shoudComponentUpdate(), componentWillUnmount(), componentDidMount()
+    ⋅⋅*https://reactjs.org/docs/react-component.html#the-component-lifecycle
 
 10. Where would I go to check out React's built-in testing tools?
 
-    ..*ReactTestUtils makes it easy to test React components in the tesing framework of your choice.
-    ..*https://reactjs.org/docs/test-utils.html
+    ⋅⋅*ReactTestUtils makes it easy to test React components in the tesing framework of your choice.
+    ⋅⋅*https://reactjs.org/docs/test-utils.html
 
 ### Turning in:
 
