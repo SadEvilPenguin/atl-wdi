@@ -7,4 +7,10 @@ router.get('/', (request, response) => {
     response.send(creditsData);
 });
 
+router.post('/', (req, res) => {
+    const newCredit = req.body
+    creditsData.push(newCredit)
+    res.send(creditsData)
+})
+
 module.exports = router;
