@@ -2,7 +2,7 @@ drop table if exists apartments;
 drop table if exists offices;
 drop table if exists storefronts;
 
-CREATE TABLE apartment (
+CREATE TABLE apartments (
     id serial primary key,
     apartment_number varchar,
     number_of_bedrooms int,
