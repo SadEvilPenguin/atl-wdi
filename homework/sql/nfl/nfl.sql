@@ -11,3 +11,13 @@ SELECT head_coach FROM teams WHERE conference='AFC' AND division='South';
 SELECT COUNT (name) FROM players;
 
 --5--
+SELECT name, head_coach FROM teams WHERE (conference='AFC' AND division='East') OR (conference='NFC' AND division='North');
+
+--6--
+SELECT name, salary FROM players ORDER BY salary DESC LIMIT 50;
+
+--7--
+SELECT AVG (salary) FROM players;
+
+--8--
+SELECT name, position FROM players WHERE salary > 10000000;
