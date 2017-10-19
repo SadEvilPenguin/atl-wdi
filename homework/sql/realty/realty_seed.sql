@@ -5,4 +5,4 @@ INSERT INTO offices (office_number, number_of_floors, square_footage, number_of_
 INSERT INTO offices (office_number, number_of_floors, square_footage, number_of_cubicles, number_of_bathrooms, address, company_name, occuiped_status, price) VALUES ('suite 2', 2, 10000, 100, 2, '123 Dont Work here seat,CT 303030', 'Not Turtle Bell', 'true', 200.12);
 
 INSERT INTO storefronts (address, occuiped_status, price, kitchen, square_footage, owner, outdoor_seating) VALUES ('123 storefront city,st 23092309', 'true', 1200.12, 'true', 950, 'James Royals Pants', 'true');
-INSERT INTO storefronts (address, occuiped_status, price, kitchen, square_footage, owner, outdoor_seating) VALUES ('123  bad storefront city,st 23092', 'false', 1900.12, 'false', 1950, 'Me');
+INSERT INTO storefronts (address, occuiped_status, price, kitchen, square_footage, owner, outdoor_seating) VALUES ('123  bad storefront city,st 23092', 'false', 1900.12, 'false', 1950, 'Me', 'false');
