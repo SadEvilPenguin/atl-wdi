@@ -4,18 +4,18 @@ drop table if exists storefronts;
 
 CREATE TABLE apartment (
     id serial primary key,
-    apartment_number int,
+    apartment_number varchar,
     number_of_bedrooms int,
     address text not null,
     tenant varchar,
     occupied_status boolean,
     square_footage int,
-    price int
+    price money
 );
 
 CREATE TABLE offices (
     id serial primary key,
-    office_number int,
+    office_number varchar,
     number_of_floors int,
     square_footage int,
     number_of_cubicles int,
@@ -23,14 +23,14 @@ CREATE TABLE offices (
     address text not null,
     company_name varchar,
     occuiped_status boolean,
-    price int
+    price money
 );
 
 CREATE TABLE storefronts (
     id serial primary key,
     address text not null,
     occuiped_status boolean,
-    price int,
+    price money,
     kitchen boolean,
     square_footage int,
     owner varchar,
