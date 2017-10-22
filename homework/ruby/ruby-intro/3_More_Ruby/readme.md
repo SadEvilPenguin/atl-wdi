@@ -23,19 +23,23 @@ Answer should be no more than a couple of sentences. Refer to the reading.
 1. According to Metz, what is Object-oriented design about?
 
 ```
-Your Answer Here
+Object Oriented Design is the art of arranging code, managing dependencies and thinking of predfiend procedures as a series of messages that pass between objects.
 ```
 
 2. What does SOLID stand for?
 
 ```
-Your Answer Here
+Single Responsibility
+Open-Closed
+Liskov Substitution
+Interface Segregation
+Dependency Inversion
 ```
 
 3. Ruby is a class-based object-oriented language. What does that mean?
 
 ```
-Your Answer Here
+combines data and behavior together into it's objects and then uses messages to invoke one another's behaviot.
 ```
 
 4. Where are methods defined in Ruby?
