@@ -45,35 +45,40 @@ combines data and behavior together into it's objects and then uses messages to 
 4. Where are methods defined in Ruby?
 
 ```
-Your Answer Here
+Methods are defined in classes
 ```
 
 5. Why does single Responsibility matter?
 
 ```
-Your Answer Here
+A class that has more than one responsibility is difficult to reuse. Classes that are easy to reuse are pluggable units of well-defined behavior that have few entanglements. Depending on classes that do too much have a higher chance of breaking unexpectedly if you change it.
 ```
 
 6. What does `attr_reader` do?
 
 ```
-Your Answer Here
+is amethod that allows you to refere to a variable without acessing the variable directly
 ```
 
 7. What are 4 benefits Metz outlines for methods that have a single responsibility?
 
 ```
-Your Answer Here
+Expose previously hidden qualities,
+Avoid the need for comments,
+Encourage reuse,
+Are easy to move to another class
 ```
 
 8. What are 4 things an object knows when it has a dependency?
 
 ```
-Your Answer Here
+1. The name of another class
+2. The name of a message that it intends to send to someone other than self.
+3.The arguments that a message requires
+4. The order of those argumets
 ```
 
 9. Dependency management is core to creating future-proof applications. What does injecting dependencies and isolating dependencies do? What are their benefits?
 
 ```
-Your Answer Here
-```
+It reduces the sticking points in your application. In other words it makes it more flexiable and easier to change. Injection allows use to reduce the number of dependencies, while Isolating Dependencies, isolates the dependencey while exposing it better as a sticking point.
