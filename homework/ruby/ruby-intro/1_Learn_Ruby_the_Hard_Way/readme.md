@@ -99,14 +99,18 @@ Please answer the following questions in the spaces provided.
 1.  How do you write an `if` statement in Ruby?
 
   ```ruby
-    # your answer here
+    x = 0
+    if x < 5
+      puts x
+      x += 1
+    end
   ```
 
 2.  Please write code that would take the string "007", reverse it,
     and return the integer `700`.
 
   ```ruby
-    # your answer here
+    "007".reverse.to_i
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -114,37 +118,50 @@ Please answer the following questions in the spaces provided.
     (i.e. modifying the original array, rather than returning a new array).
 
   ```ruby
-    # your answer here
+    a = [23,56,3,7]
+    a.sort.reverse!
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    Your answer here: It mean that the method should be done to the varable itself mutating that variable by whatever method called
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    Your answer here: it is a conditional usually that returns a boolean value
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
-  ```ruby
-    # your answer here
+  ```ruby 
+    def count(number_from, number_to)
+      while number_from <= number_to 
+      puts number_from
+      number_from += 1
+      end
+    end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    class Person
+    def initialize(name)
+      puts "Hello, #{name}"
+    end
+    end
   ```
 
 7. Please give an example of how iteration can be performed in Ruby.
 
   ```ruby
-    # your answer here
+    a = [1, 2, 3, 4, 5]
+    a.each do |number|
+    puts number
+    end
   ```
 
 8.  If I modify a class in Ruby by adding a method, will instances of that class
@@ -152,5 +169,5 @@ Please answer the following questions in the spaces provided.
     Please explain why.
 
   ```text
-    Your answer here:
+    Your answer here: yes because each instance is a part of the class object so when the class is updated so are the instances of that class.
   ```
