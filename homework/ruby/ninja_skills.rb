@@ -101,12 +101,27 @@
 # p another_arr
 
 #--Challenge 9--
-a = (1..1000).to_a
-sum_arr = []
-a.each do |num|
-    if num % 3 == 0 || num % 5 == 0
-        sum_arr.push(num)
-    end
+# a = (1..1000).to_a
+# sum_arr = []
+# a.each do |num|
+#     if num % 3 == 0 || num % 5 == 0
+#         sum_arr.push(num)
+#     end
+# end
+# total = sum_arr.sum
+# puts total
+
+#--Final Challenge--
+def check_prime?(number)
+    (2..Math.sqrt(number).ceil).map do |num|
+         if number % num == 0
+             return false
+         end
+     end
+     return true
 end
-total = sum_arr.sum
-puts total
+
+def get_primes(number)
+    arr = []
+    arr.push((1..number).select{|n| check_prime? n})
+end
