@@ -21,3 +21,10 @@ puts d
 
 
 #--Challenge 4--
+christine = "Hi, I'm Christine"
+likesTo = "long walks on the beach, kinda."
+puts christine + " and I like " + likesTo
+g = "2"
+g_to_number = g.to_i
+puts g.to_i + g_to_number
+
