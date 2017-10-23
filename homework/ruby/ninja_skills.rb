@@ -41,10 +41,27 @@
 # puts "#{name} like to #{favorite}"
 
 #--Challenge 6 --
-myFirstArray = []
-myFirstArray = ["one", "Two", "Three", "Four", "Five", 1, 2, 3, 4]
-puts myFirstArray.last
-myFirstArray[1] = "Joe"
-myFirstArray[2] = 3
-myFirstArray.push(true)
-puts myFirstArray[3].class
+# myFirstArray = []
+# myFirstArray = ["one", "Two", "Three", "Four", "Five", 1, 2, 3, 4]
+# puts myFirstArray.last
+# myFirstArray[1] = "Joe"
+# myFirstArray[2] = 3
+# myFirstArray.push(true)
+# puts myFirstArray[3].class
+
+#--Challenge 7 --
+myFavoriteAnimals = {
+    "Edgar" => "JackAss",
+    "Chris" => "Turtle",
+    "James" => "Cat",
+    "Aaron" => "Dog",
+    "Ericka" => "Peacock"
+}
+
+myFavoriteAnimals["Edgar"] = "Bear"
+
+favoriteMovie = {}
+favoriteMovie[:movie] = "Back to the future"
+
+puts myFavoriteAnimals
+puts favoriteMovie
