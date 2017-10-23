@@ -67,35 +67,46 @@
 # puts favoriteMovie
 
 #--Challenge 8 --
-firstRange = (1..10)
-firstRange = firstRange.to_a
+# firstRange = (1..10)
+# firstRange = firstRange.to_a
 
-secondRange = (1..1000)
-secondRange = secondRange.to_a
+# secondRange = (1..1000)
+# secondRange = secondRange.to_a
 
-for number in firstRange
-    number = number.to_s
-    p number
-end
+# for number in firstRange
+#     number = number.to_s
+#     p number
+# end
 
-x = 0
-while x < 50 do
-    puts secondRange[x]
-    x += 1
-end
-new_arr = []
-firstRange.each do |number|
-    if number.odd?
-        new_arr.push(number * 2)
+# x = 0
+# while x < 50 do
+#     puts secondRange[x]
+#     x += 1
+# end
+# new_arr = []
+# firstRange.each do |number|
+#     if number.odd?
+#         new_arr.push(number * 2)
+#     end
+# end
+# puts new_arr
+
+# another_arr = firstRange.map do |num|
+#     if num.even?
+#         num.to_s
+#     else
+#         num
+#     end
+# end
+# p another_arr
+
+#--Challenge 9--
+a = (1..1000).to_a
+sum_arr = []
+a.each do |num|
+    if num % 3 == 0 || num % 5 == 0
+        sum_arr.push(num)
     end
 end
-puts new_arr
-
-another_arr = firstRange.map do |num|
-    if num.even?
-        num.to_s
-    else
-        num
-    end
-end
-p another_arr
+total = sum_arr.sum
+puts total
