@@ -28,3 +28,16 @@ g = "2"
 g_to_number = g.to_i
 puts g.to_i + g_to_number
 
+#--Challenge 5 --
+puts "Input an Integer"
+number = gets.chomp.to_i
+puts number * 2
+
+puts "What is your name?"
+name = gets.chomp
+puts "What do you like to do?"
+favorite = gets.chomp
+
+puts "#{name} like to #{favorite}"
+
+#--Challenge 6 --
