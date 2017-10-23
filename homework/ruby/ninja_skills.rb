@@ -50,18 +50,52 @@
 # puts myFirstArray[3].class
 
 #--Challenge 7 --
-myFavoriteAnimals = {
-    "Edgar" => "JackAss",
-    "Chris" => "Turtle",
-    "James" => "Cat",
-    "Aaron" => "Dog",
-    "Ericka" => "Peacock"
-}
+# myFavoriteAnimals = {
+#     "Edgar" => "Donkey",
+#     "Chris" => "Turtle",
+#     "James" => "Cat",
+#     "Aaron" => "Dog",
+#     "Ericka" => "Peacock"
+# }
 
-myFavoriteAnimals["Edgar"] = "Bear"
+# myFavoriteAnimals["Edgar"] = "Bear"
 
-favoriteMovie = {}
-favoriteMovie[:movie] = "Back to the future"
+# favoriteMovie = {}
+# favoriteMovie[:movie] = "Back to the future"
 
-puts myFavoriteAnimals
-puts favoriteMovie
+# puts myFavoriteAnimals
+# puts favoriteMovie
+
+#--Challenge 8 --
+firstRange = (1..10)
+firstRange = firstRange.to_a
+
+secondRange = (1..1000)
+secondRange = secondRange.to_a
+
+for number in firstRange
+    number = number.to_s
+    p number
+end
+
+x = 0
+while x < 50 do
+    puts secondRange[x]
+    x += 1
+end
+new_arr = []
+firstRange.each do |number|
+    if number.odd?
+        new_arr.push(number * 2)
+    end
+end
+puts new_arr
+
+another_arr = firstRange.map do |num|
+    if num.even?
+        num.to_s
+    else
+        num
+    end
+end
+p another_arr
